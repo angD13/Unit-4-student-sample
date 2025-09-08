@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electives Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Electives Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            
+            <div class="filter-group">
+                <label for="filter-teacher">Teacher</label>
+                <select id="filter-teacher">
+                    <option value="">All Teachers</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-grade">Grade</label>
+                <select id="filter-grade">
+                    <option value="">All Grades</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-credit">Credit Type</label>
+                <select id="filter-credit">
+                    <option value="">All Credit Types</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="filter-period">Periods Offered</label>
+                <select id="filter-period">
+                    <option value="">All Periods</option>
+                </select>
+            </div>
+
+            <button id="clear-filters" class="btn-clear">Clear Filters</button>
+        </aside>
+
+        <main>
+            <section id="filters-applied">
+                <h3>Applied Filters</h3>
+                <p>No filters applied</p>
+            </section>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elective</th>
+                            <th>Teacher</th>
+                            <th>Grades</th>
+                            <th>Credit Types</th>
+                            <th>Periods</th>
+                        </tr>
+                    </thead>
+                    <tbody id="elective-rows">
+                        <!-- Rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div id="progress-label">Progress: 0%</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
